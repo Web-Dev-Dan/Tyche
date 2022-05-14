@@ -1,12 +1,4 @@
 
-/*
-BEM Naming Convention
-B(lock) - Main Block - .stick-man 
-E(lement) - Part of the main block - .stick-man__head, .stick-man__body
-M(odifier) - A modification of block or element - .stick-man--blue, .stick-man__head--small
-*/
-
-
 /* ----- Variables ----- */
 :root {
     /* Fonts */
