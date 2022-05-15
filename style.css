@@ -1,3 +1,10 @@
+/*
+BEM Naming Convention
+B(lock) - Main Block - .stick-man 
+E(lement) - Part of the main block - .stick-man__head, .stick-man__body
+M(odifier) - A modification of block or element - .stick-man--blue, .stick-man__head--small
+*/
+
 
 /* ----- Variables ----- */
 :root {
@@ -38,11 +45,14 @@ button:hover {
     filter: brightness(95%);
 }
 
-.text-link {
+.btn-text-link {
+    background-color: transparent;
     color: var(--color-primary);
+    font-family: var(--font-primary);
+    border: none;
 }
 
-.text-link:hover {
+.btn-text-link:hover {
     cursor: pointer;
     filter: brightness(90%);
 }
@@ -142,9 +152,11 @@ html, body {
     font-size: 1.8rem;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.login-detail__login-page {
+.login-detail__login-page, .login-detail__create-account-page {
     display: flex;
     flex-direction: column;
 }
@@ -158,6 +170,7 @@ html, body {
 
 .input-container__input {
     font-family: var(--font-primary);
+    color: var(--color-primary);
     font-size: 2rem;
     width: 100%;
     height: 100%;
@@ -180,10 +193,10 @@ html, body {
     transform: translateY(-50%);
 }
 
-.login-detail__login-page--text {
+.login-detail__login-page--text, .login-detail__create-account-page--text {
     font-size: 1.6rem;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     color: var(--color-primary);
 }
 
@@ -191,11 +204,17 @@ html, body {
     width: 100%;
     height: 5rem;
     font-size: 2rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .input-container__button:hover {
     filter: brightness(95%);
+}
+
+.login-detail__login-page--text__button, .login-detail__create-account-page--text__button {
+    font-size: 1.6rem;
+    text-decoration: underline;
 }
 
 
@@ -228,6 +247,10 @@ html, body {
 .update__button i {
     color: var(--color-light);
     font-size: 2.4rem;
+}
+
+#forgotPasswordBtn {
+    margin-bottom: 2rem;
 }
 
 /* ----- ⭐️ Navigation ⭐️ ----- */
@@ -287,13 +310,14 @@ html, body {
 
 /* User Information */
 .nav .user-info {
-    background-color: green;
+    /* background-color: green; */
     padding-left: 10rem;
 }
 
 .user-info__button {
     width: 4rem;
     height: 4rem;
+    margin-left: 1rem;
 }
 
 .user-info__button--icon {
