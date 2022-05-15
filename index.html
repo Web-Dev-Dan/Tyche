@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/imgs/logo-small.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -38,26 +40,45 @@
             <div class="login-detail__header">
                 <hr class="login-detail__header--hr" />
                 <div class="login-detail__header--title">
-                    <h2>Sign In</h2>
+                    <h2 id="loginDetailHeader">Sign In</h2>
                 </div>
             </div>
             <!-- Login -->
-            <form class="login-detail__login-page">
+            <form id="loginPage" class="login-detail__login-page" autocomplete="off">
                 <div class="input-container">
-                    <input class="input-container__input" type="text" placeholder="Username">
+                    <input id="userNameLoginInput" class="input-container__input" type="text" placeholder="Username">
                     <i class="input-container__icon fa-solid fa-user"></i>
                 </div>
                 <div class="input-container">
-                    <input class="input-container__input" type="text" placeholder="Password">
+                    <input id="passwordLoginInput" class="input-container__input" type="password"
+                        placeholder="Password">
                     <i class="input-container__icon fa-solid fa-lock"></i>
                 </div>
-                <p class="login-detail__login-page--text"><a class="text-link" href="#">Forgot Password?</a></p>
+                <button id="forgotPasswordBtn" class="login-detail__login-page--text__button btn-text-link">Forgot
+                    Password?</button>
                 <button id="loginBtn" class="input-container__button btn-primary">Login</button>
-                <p class="login-detail__login-page--text">Not registered? <a class="text-link" href="#">Create an
-                        account!</a></p>
+                <p class="login-detail__login-page--text">Not registered? <button id="openCreateAccountBtn"
+                        class="login-detail__login-page--text__button btn-text-link">Create an
+                        account!</button>
+                </p>
             </form>
             <!-- Create Account -->
-            <div class="login-detail__create-account-page"></div>
+            <form id="createAccountPage" class="login-detail__create-account-page element-hidden" autocomplete="off">
+                <div class="input-container">
+                    <input id="createAccountInput__name" class="input-container__input" type="text"
+                        placeholder="Username">
+                    <i class="input-container__icon fa-solid fa-user"></i>
+                </div>
+                <div class="input-container">
+                    <input id="createAccountInput__password" class="input-container__input" type="password"
+                        placeholder="Password">
+                    <i class="input-container__icon fa-solid fa-lock"></i>
+                </div>
+                <button id="createAccountBtn" class="input-container__button btn-primary">Create Account</button>
+                <p class="login-detail__create-account-page--text">Already have an account? <button id="openLoginBtn"
+                        class="login-detail__create-account-page--text__button btn-text-link">Log in here!</button>
+                </p>
+            </form>
         </div>
     </div>
 
@@ -87,6 +108,15 @@
             <!-- User Info -->
             <div class="user-info">
                 <button id="anonymousUserBtn" class="user-info__button btn-primary">
+                    <i class="user-info__button--icon fa-solid fa-user"></i>
+                </button>
+                <button id="userBasketBtn" class="user-info__button btn-primary element-hidden">
+                    <i class="user-info__button--icon fa-solid fa-basket-shopping"></i>
+                </button>
+                <button id="likedItemsBtn" class="user-info__button btn-primary element-hidden">
+                    <i class="user-info__button--icon fa-solid fa-heart"></i>
+                </button>
+                <button id="userBtn" class="user-info__button btn-primary element-hidden">
                     <i class="user-info__button--icon fa-solid fa-user"></i>
                 </button>
             </div>
